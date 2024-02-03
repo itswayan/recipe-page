@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: hsl(30, 54%, 90%);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 500px;
+  background-color: #fff;
+  margin: 100px 0;
+  border-radius: 10px;
+}
+
+img {
+  width: 450px;
+  display: block;
+  margin: 25px auto;
+  border-radius: 10px;
+}
+
+.hero__description,
+.nutritions__description {
+  font-size: 0.7rem;
+  color: hsl(30, 10%, 34%);
+}
+
+.preparation {
+  background-color: hsl(330, 100%, 98%);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.preparation__header {
+  margin-bottom: 10px;
+}
+
+li {
+  font-size: 0.7rem;
+  color: hsl(30, 10%, 34%);
+}
+
+ul {
+  list-style: none;
+}
+
+ul li::before {
+  content: "•";
+  color: hsl(332, 51%, 32%);
+  display: inline-block;
+  width: 1.5rem;
+  line-height: 2;
+}
+
+.preparation__header {
+  font-size: 1rem;
+  color: hsl(332, 51%, 32%);
+}
+
+.ingredients__header,
+.instructions__header,
+.nutritions__header {
+  margin-bottom: 10px;
+  color: hsl(14, 45%, 36%);
+}
+
+/* ol li {
+  color: hsl(332, 51%, 32%);
+  margin: 10px 0 10px 13px;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+ol li span {
+  color: hsl(30, 10%, 34%);
+  font-weight: normal;
+} */
+
+ol {
+  list-style: none;
+  counter-reset: li;
+}
+
+ol li::before {
+  content: counter(li) ".";
+  color: hsl(332, 51%, 32%);
+  display: inline-block;
+  width: 1rem;
+  font-weight: bold;
+}
+
+ol li {
+  counter-increment: li;
+  line-height: 1.5;
+  margin: 0 0 10px 0;
+}
+.preparation,
+.ingredients,
+.instructions,
+.hero__header,
+.hero__description,
+.nutritions__header,
+.nutritions__description {
+  margin: 0 20px 20px 20px;
+}
+
+.item-container {
+  margin-bottom: 10px;
+}
+
+/* .item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 200px 0 50px;
+  font-size: 0.7rem;
+} */
+
+.item {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0 100px 0 50px;
+  font-size: 0.7rem;
+}
+
+.divider {
+  border-bottom: 1px solid #000;
+  margin: 0 20px 10px 20px;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.item .bold {
+  color: hsl(332, 51%, 32%);
+}
